@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> READER'S HUB </title>
+</head>
+<style>
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+  background-color: ALICEBLUE
+}
+</style>
+<body style = "background-color: Biege;">
+<header> <h1> Blog Overview </h1> <header>
+<table style = "width : 100%">
+<tr>
+<h3>
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>CREATED DATE</th>
+    <th>ACTION</th>
+</h3>
+</tr>
+
+{%for i in object_list%}
+<tr>
+    <td>{{i.id}}</td>
+    <td>{{i.title}}</td>
+    <td>{{i.created_at}}</td>
+    <td><u>view</u></td>
+</tr>
+
+{%endfor%}
+</table>
+
+</body>
+</html> 

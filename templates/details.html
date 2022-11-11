@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Book Corner</title>
+</head>
+<body>
+<header> <h1> Title </h1> <header>
+
+{% for i in mybooks %}
+<p>{{ i.title }} </p>
+<p>{{ i.cover_image }}</p>
+<p>{{ i.created_at }}</p>
+
+<p>{{ i.content }}</p>
+{% endfor %}
+
+</body>
+</html> 
