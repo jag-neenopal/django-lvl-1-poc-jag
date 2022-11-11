@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Book Corner</title>
+
+<title>
+ 	Blog Corner
+</title>
 </head>
-<body>
-<header> <h1> Title </h1> <header>
-
+<body style="background-color:biege;">
 {% for i in mybooks %}
-<p>{{ i.title }} </p>
-<p>{{ i.cover_image }}</p>
-<p>{{ i.created_at }}</p>
+<header > <h1 style="background-color:lightblue"> {{ i.title }} </h1> <header>
 
+<div style="height:70%;width:100%">
+   <div id = "coverimage" style="position:relative;width:50%;display:inline-block;background-color:aliceblue">
+      
+      {% load static %}
+      <img src="{% static i.cover_image %}" alt="My image">
+
+
+   </div>
+    <div style = "position:relative;width:40%;left:10px;display:inline-block;text-align:center;background-color:aliceblue">
+      <h3><b><u>CREATED AT</u></b></P>
+      <p>{{ i.created_at }}</p>
+    </div>
+</div>
+<br>
+<div id = "content" style = "width:90%;border:3px;border-style: outset;position:static;padding-left:50px;padding-right:50px;background-color:aliceblue">
+<h3> CONTENT </H3>
 <p>{{ i.content }}</p>
 {% endfor %}
-
+</div>
 </body>
 </html> 

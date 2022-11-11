@@ -21,5 +21,5 @@ from appblogs.views import ArticleList
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blogs/', ArticleList.as_view()),
-    path('blogs/1/',views.detailspage),
+    path('blogs/<int:page_id>/',views.detailspage),
 ]

@@ -11,8 +11,9 @@ class ArticleList(ListView):
     
 # Create your views here.
     
-def detailspage(request):
-    mydata = article.objects.filter(id = 3).values()
+def detailspage(request, page_id):
+    
+    mydata = article.objects.filter(id = page_id).values()
     details = loader.get_template('details.html')
     context = {
         'mybooks' : mydata,
