@@ -13,8 +13,11 @@
 <div style="height:70%;width:100%">
    <div id = "coverimage" style="position:relative;width:50%;display:inline-block;background-color:aliceblue">
       
-      {% load static %}
-      <img src="{% static i.cover_image %}" alt="My image">
+
+      {% load uploads %}
+      <img src="{% "{{i.cover_image}}" %}" alt="My image"/>
+
+
 
 
    </div>
