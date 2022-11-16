@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from appblogs import views
 from appblogs.views import ArticleList
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blogs/', ArticleList.as_view()),
     path('blogs/<int:page_id>/',views.detailspage),
-]
+] + static(settings.MEDIA_URL,
+            document_root = settings.MEDIA_ROOT)
